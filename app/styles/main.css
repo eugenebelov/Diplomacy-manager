@@ -1,0 +1,66 @@
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container .login {
+    width: 600px;
+}
+
+.login-form {
+    padding-top: 80px;
+}
+
+.login-form .btn {
+    margin-top: 40px;
+}
+
+.centered {
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.save-holder {
+    padding: 20px;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.logged {
+    padding: 0 0 30px 0;
+    text-align: right;
+}
+
+.alliance-list th {
+    background-color: #E1E1E1;
+}
+
+button.delete-row {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.delete-row {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+}
+
+.delete-row:hover {
+    opacity: 1;   
+    color: #FF0000;
+};

@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row logged">
+        Logged in as /UserName/
+    </div>
+    <div id="addAlliance" class="row save-holder">
+        <form action="" role="form" class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Alliance Name..."/>
+            </div>
+            <div class="form-group">
+                <select name="status" id="status" class="form-control">
+                    <option value="status">Aliance status</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <table id="allianceList" class="table table-striped alliance-list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Alliance</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{name}}</td>
+              <td>{{alliance}}</td>
+              <td>{{status}}</td>
+              <td>{{date}}</td>
+              <td style="width:5%">
+                  <button type="button" class="delete-row"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
