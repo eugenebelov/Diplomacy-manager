@@ -1,0 +1,12 @@
+{
+  "name": "diplomacy-manager",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "bootstrap-less": "latest",
+    "ember-starter-kit": "latest",
+    "ember-localstorage-adapter": "latest",
+    "underscore": "latest"
+  },
+  "devDependencies": {}
+}
