@@ -3,7 +3,7 @@ App.LoginView = Ember.View.extend({
 	classNames: ["container"],
 	actions: {
 		createUser: function(param) {
-			var userInput = this.$().find('#user-name-input')
+			var userInput = this.$().find('#userNameInput')
 			if(userInput.val() != "" && userInput.val().length > 4) {
 				this.get('controller').send('createUser', userInput.val());
 			}

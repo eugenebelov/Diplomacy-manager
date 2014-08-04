@@ -25,7 +25,7 @@
         <![endif]-->
 
 
-        <script type="text/x-handlebars" data-template-name="aliance-item">
+        <script type="text/x-handlebars" data-template-name="alianceItem">
             <tr>
               <td>name</td>
               <td>alliance</td>
@@ -39,9 +39,9 @@
             </tr>
         </script>
 
-        <script type="text/x-handlebars" data-template-name="_aliance-list">
+        <script type="text/x-handlebars" data-template-name="_alianceList">
             <div class="row">
-                <table id="allianceList" class="table table-striped alliance-list">
+                <table id="allianceList" class="table alliance-list">
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -52,35 +52,40 @@
                     </tr>
                   </thead>
                   <tbody>
+                  {{#each controller}}
                     <tr>
-                      <td>name</td>
-                      <td>alliance</td>
-                      <td>status</td>
-                      <td>date</td>
+                      <td style="width:15%">{{name}}</td>
+                      <td style="width:25%">{{aliance}}</td>
+                      <td {{bind-attr class="fill"}}>{{status}}</td>
+                      <td style="width:10%">{{date}}</td>
                       <td style="width:5%">
-                          <button type="button" class="delete-row">
+                          <button type="button" class="delete-row" {{action 'removeAliance' this}}>
                             <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                           </button>
                       </td>
                     </tr>
+                  {{/each}}
                   </tbody>
                 </table>
             </div>
         </script>
 
-        <script type="text/x-handlebars" data-template-name="_add-aliance">
+        <script type="text/x-handlebars" data-template-name="_addAliance">
             <div id="addAlliance" class="row save-holder">
                 <form action="" role="form" class="form-inline">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Alliance Name..."/>
+                        <input id="alianceNameInput" type="text" class="form-control" placeholder="Alliance Name..." value="Aliance-Name"/>
                     </div>
                     <div class="form-group">
-                        <select name="status" id="status" class="form-control">
-                            <option value="status">Aliance status</option>
-                        </select>
+                        {{view Ember.Select viewName="select"
+                                            id="statusSelect"
+                                            classNames=selectClass
+                                            content=statusList
+                                            optionLabelPath="content.title"
+                                            optionValuePath="content.color"}}
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-primary" {{action 'saveAliance' target='view'}}>Save</button>
                     </div>
                 </form>
             </div>
@@ -95,8 +100,8 @@
         <script type="text/x-handlebars" data-template-name="manager">
             <div class="container">
                 {{partial "logged"}}
-                {{partial "add-aliance"}}
-                {{partial "aliance-list"}}
+                {{partial "addAliance"}}
+                {{partial "alianceList"}}
             </div>
         </script>
 
@@ -108,7 +113,7 @@
                 </div>
                 <form role="form" class="login-form">
                     <div class="row centered">
-                        <input id="user-name-input" type="text" class="form-control" placeholder="Your name..." value="Jinni">
+                        <input id="userNameInput" type="text" class="form-control" placeholder="Your name..." value="Jinni">
                     </div>
 
                     <div class="row centered">
@@ -135,6 +140,6 @@
 <script src="./scripts/controllers/login-controller.js" type="text/javascript"></script>
 <script src="./scripts/controllers/manager-controller.js" type="text/javascript"></script>
 <script src="./scripts/view/login-view.js" type="text/javascript"></script>
-<script src="./scripts/view/logged-user-view.js" type="text/javascript"></script>
+<script src="./scripts/view/manager-view.js" type="text/javascript"></script>
 
 </html>
