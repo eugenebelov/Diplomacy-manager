@@ -10,3 +10,7 @@ Test task using Ember.js + Less
     • Non Aggression Pact - Blue<br />
     • Enemy - Red<br />
 3. Create/Delete/Sort functionality
+
+
+-> "npm install -g bower", if you havn't
+-> run "bower install" in project root directory
