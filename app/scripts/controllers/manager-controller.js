@@ -1,5 +1,6 @@
 App.ManagerController = Ember.ArrayController.extend({
 	loggedUser: null,
+  	sortAscending: true,
 	selectClass: ['form-control'],
 	statusList: [
 		{ title:"Ally", color:"green" },
@@ -30,6 +31,11 @@ App.ManagerController = Ember.ArrayController.extend({
 		removeAliance: function(role) {
 			role.deleteRecord();
 			role.save();
+		},
+
+		sortBy: function(option) {
+			this.set('sortProperties', [option])
+			// (this.sortAscending) ? this.set('sortAscending', false) : this.set('sortAscending', true);
 		}
 	}
 });
