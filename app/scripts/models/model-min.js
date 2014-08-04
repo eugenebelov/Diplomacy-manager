@@ -1,0 +1,1 @@
+App.User=DS.Model.extend({name:DS.attr("string"),hasSession:DS.attr("boolean",{defaultValue:!1})});App.Aliance=DS.Model.extend({name:DS.attr("string"),aliance:DS.attr("string"),status:DS.attr("string"),fill:DS.attr("string"),date:DS.attr("string")});

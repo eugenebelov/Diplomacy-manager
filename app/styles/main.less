@@ -1,0 +1,109 @@
+@enemy: #FF9999;
+@ally: #66CCCC;
+@noagression: #99CCFF;
+@vassal: #FF9966;
+
+@aliance-head: #E1E1E1;
+@delete-hover: #FF0000;
+@border-color: #CFCFCF;
+
+@set-bold: bold;
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container .login {
+    width: 600px;
+
+    .login-form {
+        padding-top: 80px;
+
+        .btn {
+            margin-top: 40px;
+        }
+    }
+
+    div {
+        margin: 0 auto; 
+        text-align: center;
+    }
+}
+
+.save-holder {
+    padding: 20px;
+    border: 1px solid @border-color;
+    margin-bottom: 30px;
+
+    .rounded-corners;
+}
+
+.logged-user-placeholder {
+    padding: 0 0 30px 0;
+    text-align: right;
+}
+
+.delete-row {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    
+    button& {
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none
+    }
+
+    &:hover {
+        opacity: 1;   
+        color: @delete-hover;
+    }
+}
+
+.form-group.to-inline {
+    float: left;
+    padding-right: 10px;
+}
+
+.enemy {
+    color: @enemy;
+    font-weight: @set-bold;
+}
+
+.ally {
+    color: @ally;
+    font-weight: @set-bold;
+}
+
+.noagression {
+    color: @noagression;
+    font-weight: @set-bold;
+}
+
+.vassal {
+    color: @vassal;
+    font-weight: @set-bold;
+}
+
+.alliance-list {
+	th {
+    	background-color: @aliance-head;
+    	cursor: pointer;
+	}
+
+	p {
+	    padding: 15px;
+	}
+}

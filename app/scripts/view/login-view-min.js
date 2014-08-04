@@ -1,0 +1,1 @@
+App.LoginView=Ember.View.extend({templateName:"login",classNames:["container"],actions:{createUser:function(e){var t=this.$().find("#userNameInput");t.val()!=""&&t.val().length>2&&this.get("controller").send("createUser",t.val())}}});

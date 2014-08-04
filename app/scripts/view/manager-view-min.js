@@ -1,0 +1,1 @@
+App.ManagerView=Ember.View.extend({templateName:"manager",actions:{saveAliance:function(){var e=this.$().find("#alianceNameInput").val(),t=this.$().find("#statusSelect :selected");this.get("controller").send("saveAliance",e,t.text(),t.val())}}});

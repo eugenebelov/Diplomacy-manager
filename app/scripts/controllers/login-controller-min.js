@@ -1,0 +1,1 @@
+App.LoginController=Ember.ObjectController.extend({userLogged:"",actions:{createUser:function(e){var t=this;this.store.find("user",{name:e}).then(function(e){console.log("Found that guy:",e.query.name);t.set("userLogged",e.query.name)},function(n){user=t.store.createRecord("user",{name:e,hasSession:!0});t.set("userLogged",e);user.save()})}}});

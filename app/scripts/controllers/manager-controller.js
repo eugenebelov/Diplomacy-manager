@@ -3,15 +3,16 @@ App.ManagerController = Ember.ArrayController.extend({
   	sortAscending: true,
 	selectClass: ['form-control'],
 	statusList: [
-		{ title:"Ally", color:"green" },
-		{ title:"Vassal", color:"orange" },
-		{ title:"Non Aggression Pact", color:"blue" },
-		{ title:"Enemy", color:"red" }
+		{ title:"Ally", color:"ally" },
+		{ title:"Vassal", color:"vassal" },
+		{ title:"Non Aggression Pact", color:"noagression" },
+		{ title:"Enemy", color:"enemy" }
 	],
 	actions: {
 		saveAliance: function(alianceName, status, colored) {
 			var date = new Date();
-			var day = (date.getDay() < 9) ? '0'+date.getDay() : date.getDay();
+			
+			var day = (date.getDate() < 9) ? '0'+date.getDate() : date.getDate();
 			var month = (date.getMonth() < 9) ? '0'+date.getMonth() : date.getMonth()
 			
 			var settelmentDate = day + '.' + month + '.' + date.getFullYear().toString().slice(2);
@@ -34,8 +35,8 @@ App.ManagerController = Ember.ArrayController.extend({
 		},
 
 		sortBy: function(option) {
-			this.set('sortProperties', [option])
-			// (this.sortAscending) ? this.set('sortAscending', false) : this.set('sortAscending', true);
+			this.set('sortProperties', [option]);
+			(this.sortAscending) ? this.set('sortAscending', false) : this.set('sortAscending', true);
 		}
 	}
 });
