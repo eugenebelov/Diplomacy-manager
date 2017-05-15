@@ -1,7 +1,7 @@
 Diplomacy-manager
 =================
 
-Test task using Ember.js + Less
+Ember.js + Less
 
 1. Local storage for login session
 2. Available aliances: <br />
